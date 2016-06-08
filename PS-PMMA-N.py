@@ -33,7 +33,7 @@ nA = 8
 nB = 8
 nAB = nA+nB
 density = 0.7
-mpb = 5 #monomer per bead
+mpb = 8 #monomer per bead
 bondlength = 1.5
 func = 0
 xl = 0
@@ -296,7 +296,11 @@ print "bondlength for coarse grain bead  ", bond
 
 #rescale the bead position to make the bondlength = bondlength
 #unit = angstroms
+print bondlength, mpb, bond
 sf = bondlength * 1.732 * mpb/bond
+print "the scale factor is ", sf
+bond = 0
+k=0
 for i in range(len(t0)):
     t0[i] = [t0[i][0]*sf, t0[i][1]*sf, t0[i][2]*sf]
 for i in range(len(t1)):
@@ -337,7 +341,7 @@ j = 0
   
 
 for i in range(num_chains):
-    print "chain",i
+    #print "chain",i
     backbone_dihedral = []
     for k in range(nA):
         if(k == nA-1):
