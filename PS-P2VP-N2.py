@@ -297,7 +297,8 @@ for i in range(1,len(t0)):
         k += 1
 bond /= k
 print "bondlength for coarse grain bead  ", bond
-
+k = 0 
+bond = 0 
 #rescale the bead position to make the bondlength = bondlength
 #unit = angstroms
 sf = bondlength * 1.732 * mpb/bond
@@ -364,7 +365,7 @@ for i in range(num_chains):
                 #the vector which is the direction of two bead
                 vec = vec/lent(vec)
                 #a unit vector which is vertical t vec
-                print vec
+               # print vec
                 vecv = dirv(vec)
         
                 vecd = dirvd(vec, vecv)
@@ -559,7 +560,7 @@ for i in range(num_chains):
                     #the vector which is the direction of two bead
                     vec = vec/lent(vec)
                     #a unit vector which is vertical t vec
-                    print vec
+                   # print vec
                     vecv = dirv(vec)
                     vecd = dirvd(vec, vecv)
                     vecm = 1.732*vec + vecd
@@ -1171,7 +1172,7 @@ for i in range(num_chains):
                     #the vector which is the direction of two bead
                     vec = vec/lent(vec)
                     #a unit vector which is vertical t vec
-                    print vec
+                   # print vec
                     vecv = dirv(vec)
                     vecd = dirvd(vec, vecv)
                     vecm = 1.732*vec + vecd
@@ -1296,7 +1297,7 @@ for i in range(num_chains):
                     bonding.append([10, int(C_aro2[3]), int(H_aro2[3])])
                     bonding.append([6, int(C_ali4[3]), int(index_atom)]) #bonding to next monomer
                     if index_atom == 38400:
-						print i,j,k
+						#print i,j,k
                     #if index_atom == 
                     with open("outbonding.txt",'a') as outb:
                         outb.write(str(bonding[len(bonding)-1])+'\n')
